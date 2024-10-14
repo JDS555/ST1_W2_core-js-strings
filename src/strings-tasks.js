@@ -5,6 +5,8 @@
  *                                                                                           *
  ******************************************************************************************* */
 
+// S1+++
+
 /**
  * Returns the length of the given string.
  *
@@ -19,9 +21,17 @@
  *   getStringLength(null) => 0
  *   getStringLength(undefined) => 0
  */
-function getStringLength(/* value */) {
-  throw new Error('Not implemented');
+function getStringLength(value) {
+  let StringLength;
+  if (value == null || value === '') {
+    StringLength = 0;
+  } else {
+    StringLength = value.length;
+  }
+  return StringLength;
 }
+
+// S2+++
 
 /**
  * Returns true if the value is a string, otherwise returns false.
@@ -37,9 +47,17 @@ function getStringLength(/* value */) {
  *   isString('test') => true
  *   isString(new String('test')) => true
  */
-function isString(/* value */) {
-  throw new Error('Not implemented');
+function isString(value) {
+  let checked;
+  if (typeof value === 'string' || value instanceof String) {
+    checked = true;
+  } else {
+    checked = false;
+  }
+  return checked;
 }
+
+// S3+++
 
 /**
  * Returns the result of concatenation of two strings.
@@ -53,9 +71,20 @@ function isString(/* value */) {
  *   concatenateStrings('aa', '') => 'aa'.
  *   concatenateStrings('', 'bb') => 'bb'
  */
-function concatenateStrings(/* value1, value2 */) {
-  throw new Error('Not implemented');
+
+// function concatenateStrings(value1, value2) {
+//   return value1 + value2;
+// }
+
+// При решении выше работает но ругаеться на неоптимальность решения
+// И требует другой метод использовать
+
+function concatenateStrings(value1, value2) {
+  const str = value1.concat(value2);
+  return str;
 }
+
+// S4 +++
 
 /**
  * Returns the first character of the given string.
@@ -68,9 +97,21 @@ function concatenateStrings(/* value1, value2 */) {
  *   getFirstChar('cat') => 'c'
  *   getFirstChar('') => ''
  */
-function getFirstChar(/* value */) {
-  throw new Error('Not implemented');
+
+// function getFirstChar(value) {
+//   const firstChar = value.slice(0, 1);
+//   return firstChar;
+// }
+
+// При решении выше работает но ругаеться на неоптимальность решения
+// И требует другой метод использовать
+
+function getFirstChar(value) {
+  const firstChar = value.charAt(0);
+  return firstChar;
 }
+
+// S5
 
 /**
  * Removes leading and trailing whitespace characters from the string.
@@ -87,6 +128,8 @@ function removeLeadingAndTrailingWhitespaces(/* value */) {
   throw new Error('Not implemented');
 }
 
+// S6
+
 /**
  * Removes only leading whitespace characters from the string.
  *
@@ -102,6 +145,8 @@ function removeLeadingWhitespaces(/* value */) {
   throw new Error('Not implemented');
 }
 
+// S7
+
 /**
  * Removes only trailing whitespace characters from the string.
  *
@@ -116,6 +161,8 @@ function removeLeadingWhitespaces(/* value */) {
 function removeTrailingWhitespaces(/* value */) {
   throw new Error('Not implemented');
 }
+
+// S8
 
 /**
  * Returns a string that is repeated the specified number of times.
