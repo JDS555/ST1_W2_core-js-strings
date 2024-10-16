@@ -1,3 +1,6 @@
+//ST1 W2 Strings
+
+
 /* *******************************************************************************************
  *                                                                                           *
  * Please read the following tutorial before implementing tasks:                              *
