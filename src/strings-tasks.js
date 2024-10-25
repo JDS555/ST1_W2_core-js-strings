@@ -84,7 +84,7 @@ function concatenateStrings(value1, value2) {
   return str;
 }
 
-// S4 +++
+// S4+++
 
 /**
  * Returns the first character of the given string.
@@ -111,7 +111,7 @@ function getFirstChar(value) {
   return firstChar;
 }
 
-// S5
+// S5+++
 
 /**
  * Removes leading and trailing whitespace characters from the string.
@@ -124,11 +124,15 @@ function getFirstChar(value) {
  *   removeLeadingAndTrailingWhitespaces('cat ') => 'cat'
  *   removeLeadingAndTrailingWhitespaces('\t\t\tHello, World! ') => 'Hello, World!'
  */
-function removeLeadingAndTrailingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
+// function removeLeadingAndTrailingWhitespaces(/* value */) {
+//   throw new Error('Not implemented');
+// }
+
+function removeLeadingAndTrailingWhitespaces(value) {
+  return value.trim();
 }
 
-// S6
+// S6+++
 
 /**
  * Removes only leading whitespace characters from the string.
@@ -141,11 +145,15 @@ function removeLeadingAndTrailingWhitespaces(/* value */) {
  *   removeLeadingWhitespaces('cat ') => 'cat '
  *   removeLeadingWhitespaces('\t\t\tHello, World! ') => 'Hello, World! '
  */
-function removeLeadingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
+// function removeLeadingWhitespaces(/* value */) {
+//   throw new Error('Not implemented');
+// }
+
+function removeLeadingWhitespaces(value) {
+  return value.trimStart();
 }
 
-// S7
+// S7+++
 
 /**
  * Removes only trailing whitespace characters from the string.
@@ -158,8 +166,12 @@ function removeLeadingWhitespaces(/* value */) {
  *   removeTrailingWhitespaces('cat ') => 'cat'
  *   removeTrailingWhitespaces('\t\t\tHello, World! ') => '\t\t\tHello, World!'
  */
-function removeTrailingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
+// function removeTrailingWhitespaces(/* value */) {
+//   throw new Error('Not implemented');
+// }
+
+function removeTrailingWhitespaces(value) {
+  return value.trimEnd();
 }
 
 // S8
@@ -181,6 +193,8 @@ function repeatString(/* str, times */) {
   throw new Error('Not implemented');
 }
 
+// S9
+
 /**
  * Remove the first occurrence of a substring from a string.
  *
@@ -196,6 +210,8 @@ function repeatString(/* str, times */) {
 function removeFirstOccurrences(/* str, value */) {
   throw new Error('Not implemented');
 }
+
+// S10
 
 /**
  * Remove the last occurrence of a substring from a string.
@@ -213,6 +229,8 @@ function removeLastOccurrences(/* str, value */) {
   throw new Error('Not implemented');
 }
 
+// S11
+
 /**
  * Calculate the sum of character codes of the given string.
  *
@@ -229,6 +247,8 @@ function sumOfCodes(/* str */) {
   throw new Error('Not implemented');
 }
 
+// S12
+
 /**
  * Checks if a string starts with a specific substring.
  *
@@ -244,6 +264,8 @@ function startsWith(/* str, substr */) {
   throw new Error('Not implemented');
 }
 
+// S13
+
 /**
  * Checks if a string ends with a specific substring.
  *
@@ -258,6 +280,8 @@ function startsWith(/* str, substr */) {
 function endsWith(/* str, substr */) {
   throw new Error('Not implemented');
 }
+
+// S14
 
 /**
  * Returns a time string in the "mm:ss" format.
@@ -276,6 +300,8 @@ function formatTime(/* minutes, seconds */) {
   throw new Error('Not implemented');
 }
 
+// S15
+
 /**
  * Returns a string in reverse order.
  *
@@ -289,6 +315,8 @@ function formatTime(/* minutes, seconds */) {
 function reverseString(/* str */) {
   throw new Error('Not implemented');
 }
+
+// S16
 
 /**
  * Returns a string with characters in alphabetical order.
@@ -305,6 +333,8 @@ function orderAlphabetically(/* str */) {
   throw new Error('Not implemented');
 }
 
+// S17
+
 /**
  * Checks if a given string contains a specified substring.
  *
@@ -320,6 +350,8 @@ function orderAlphabetically(/* str */) {
 function containsSubstring(/* str, substring */) {
   throw new Error('Not implemented');
 }
+
+// S18
 
 /**
  * Returns the number of vowels in the string.
@@ -339,6 +371,8 @@ function countVowels(/* str */) {
   throw new Error('Not implemented');
 }
 
+// S19
+
 /**
  * Returns true if the string is a palindrome; otherwise false.
  * https://en.wikipedia.org/wiki/Palindrome
@@ -356,6 +390,8 @@ function isPalindrome(/* str */) {
   throw new Error('Not implemented');
 }
 
+// S20
+
 /**
  * Find the longest word in the sentence. If there are multiple longest words,
  * the function returns the first one encountered.
@@ -372,6 +408,8 @@ function findLongestWord(/* sentence */) {
   throw new Error('Not implemented');
 }
 
+// S21
+
 /**
  * Returns the string where each word is reversed.
  *
@@ -385,6 +423,8 @@ function findLongestWord(/* sentence */) {
 function reverseWords(/* str */) {
   throw new Error('Not implemented');
 }
+
+// S22
 
 /**
  * Inverts the case of each character in the given string.
@@ -400,6 +440,8 @@ function reverseWords(/* str */) {
 function invertCase(/* str */) {
   throw new Error('Not implemented');
 }
+
+// S23
 
 /**
  * Returns the result of string template and given parameters firstName and lastName.
@@ -418,6 +460,8 @@ function getStringFromTemplate(/* firstName, lastName */) {
   throw new Error('Not implemented');
 }
 
+// S24
+
 /**
  * Extracts a name from template string 'Hello, First_Name Last_Name!'.
  *
@@ -431,6 +475,8 @@ function getStringFromTemplate(/* firstName, lastName */) {
 function extractNameFromTemplate(/* value */) {
   throw new Error('Not implemented');
 }
+
+// S25
 
 /**
  * Remove the first and last angle brackets from tag string
@@ -446,6 +492,8 @@ function extractNameFromTemplate(/* value */) {
 function unbracketTag(/* str */) {
   throw new Error('Not implemented');
 }
+
+// S26
 
 /**
  * Extracts e-mails from single string with e-mails list delimited by semicolons
@@ -466,6 +514,8 @@ function extractEmails(/* str */) {
   throw new Error('Not implemented');
 }
 
+// S27
+
 /**
  * Encode specified string with ROT13 cipher
  * See details:  https://en.wikipedia.org/wiki/ROT13
@@ -485,6 +535,8 @@ function extractEmails(/* str */) {
 function encodeToRot13(/* str */) {
   throw new Error('Not implemented');
 }
+
+// S28
 
 /**
  * Returns playid card id.
