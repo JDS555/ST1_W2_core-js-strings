@@ -497,8 +497,6 @@ function findLongestWord(/* sentence */) {
 //   throw new Error('Not implemented');
 // }
 
-// То же что и в reverse только разделим на слова пробелом ' '
-
 function reverseWords(str) {
   const splitWords = str.split(' ');
   const reversedWords = splitWords.map((word) =>
@@ -601,8 +599,7 @@ function unbracketTag(str) {
   return str.slice(1, -1);
 }
 
-// S26--- Q1 Нужно ли учить регулярные выражения или просто гуглить сейчас готовые решения?
-// Регулярки нужны :(
+// S26+++ ///3
 
 /**
  * Extracts e-mails from single string with e-mails list delimited by semicolons
@@ -619,8 +616,17 @@ function unbracketTag(str) {
  *   ],
  *   'info@gmail.com' => ['info@gmail.com']
  */
-function extractEmails(/* str */) {
-  throw new Error('Not implemented');
+
+// function extractEmails(/* str */) {
+//   throw new Error('Not implemented');
+// }
+
+function extractEmails(str) {
+  const emailArray = str.split(';');
+  const cleanedEmails = emailArray
+    .map((email) => email.trim())
+    .filter((email) => email.length > 0);
+  return cleanedEmails;
 }
 
 // S27---
@@ -641,11 +647,16 @@ function extractEmails(/* str */) {
  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
+
+// function encodeToRot13(/* str */) {
+//   throw new Error('Not implemented');
+// }
+
 function encodeToRot13(/* str */) {
   throw new Error('Not implemented');
 }
 
-// S28---
+// S28+++
 
 /**
  * Returns playid card id.
