@@ -262,7 +262,7 @@ function removeLastOccurrences(str, value) {
   return str.substring(0, index) + str.substring(index + value.length);
 }
 
-// S11---
+// S11+++ ///3
 
 /**
  * Calculate the sum of character codes of the given string.
@@ -276,8 +276,17 @@ function removeLastOccurrences(str, value) {
  *   sumOfCodes('') => 0
  *   sumOfCodes() => 0
  */
-function sumOfCodes(/* str */) {
-  throw new Error('Not implemented');
+function sumOfCodes(str) {
+  if (str === '' || typeof str !== 'string') {
+    return 0;
+  }
+
+  let sum = 0;
+  for (let i = 0; i < str.length; i += 1) {
+    sum += str.charCodeAt(i);
+  }
+
+  return sum;
 }
 
 // S12+++ ///3
