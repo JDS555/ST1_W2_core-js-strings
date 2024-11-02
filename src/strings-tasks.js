@@ -201,7 +201,7 @@ function repeatString(str, times) {
   return repeatedString;
 }
 
-// S9+++
+// S9+++ W2 С использованием .replace() ругаеться на неоптимальность решения
 
 /**
  * Remove the first occurrence of a substring from a string.
@@ -229,6 +229,12 @@ function removeFirstOccurrences(str, value) {
     str.substring(indexValueString + value.length)
   );
 }
+
+// W2 С использованием .replace() ругаеться на неоптимальность решения
+
+// function removeFirstOccurrences(str, value) {
+//   return str.replace(value, '');
+// }
 
 // S10+++
 
@@ -274,7 +280,7 @@ function sumOfCodes(/* str */) {
   throw new Error('Not implemented');
 }
 
-// S12---
+// S12+++ ///3
 
 /**
  * Checks if a string starts with a specific substring.
@@ -287,11 +293,11 @@ function sumOfCodes(/* str */) {
  *   startsWith('Hello World', 'World') => false
  *   startsWith('Hello World', 'Hello') => true
  */
-function startsWith(/* str, substr */) {
-  throw new Error('Not implemented');
+function startsWith(str, substr) {
+  return str.startsWith(substr);
 }
 
-// S13---
+// S13+++ ///3
 
 /**
  * Checks if a string ends with a specific substring.
@@ -304,11 +310,11 @@ function startsWith(/* str, substr */) {
  *   endsWith('Hello World', 'World') => true
  *   endsWith('Hello World', 'Hello') => false
  */
-function endsWith(/* str, substr */) {
-  throw new Error('Not implemented');
+function endsWith(str, substr) {
+  return str.endsWith(substr);
 }
 
-// S14---
+// S14+++ ///3
 
 /**
  * Returns a time string in the "mm:ss" format.
@@ -323,8 +329,17 @@ function endsWith(/* str, substr */) {
  *   formatTime(0, 45) => "00:45"
  *   formatTime(0, 0) => "00:00"
  */
-function formatTime(/* minutes, seconds */) {
-  throw new Error('Not implemented');
+// function formatTime(/* minutes, seconds */) {
+//   throw new Error('Not implemented');
+// }
+
+function formatTime(minutes, seconds) {
+  const totalMinutes = minutes;
+  const totalSeconds = seconds;
+  const formattedMinutes = String(totalMinutes).padStart(2, '0');
+  const formattedSeconds = String(totalSeconds).padStart(2, '0');
+
+  return `${formattedMinutes}:${formattedSeconds}`;
 }
 
 // S15+++
