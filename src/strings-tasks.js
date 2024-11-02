@@ -391,7 +391,7 @@ function orderAlphabetically(str) {
   return str.split('').sort().join('');
 }
 
-// S17---
+// S17+++ ///3
 
 /**
  * Checks if a given string contains a specified substring.
@@ -429,7 +429,7 @@ function countVowels(/* str */) {
   throw new Error('Not implemented');
 }
 
-// S19---
+// S19+++ ///3
 
 /**
  * Returns true if the string is a palindrome; otherwise false.
@@ -444,8 +444,23 @@ function countVowels(/* str */) {
  *   isPalindrome('apple') => false
  *   isPalindrome('No lemon, no melon') => true
  */
-function isPalindrome(/* str */) {
-  throw new Error('Not implemented');
+
+// function isPalindrome(str) {
+//   if (str.toLocaleLowerCase[str.length - 1] === str.toLocaleLowerCase[0]) {
+//     return true;
+//   }
+//   return false;
+// }
+
+function isPalindrome(str) {
+  const cleanedStr = str.toLocaleLowerCase().replace(/[^a-z0-9]/g, '');
+
+  for (let i = 0; i < cleanedStr.length / 2; i += 1) {
+    if (cleanedStr[i] !== cleanedStr[cleanedStr.length - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
 }
 
 // S20---
@@ -493,7 +508,7 @@ function reverseWords(str) {
   return joinArray;
 }
 
-// S22---
+// S22+++ ///3
 
 /**
  * Inverts the case of each character in the given string.
@@ -506,8 +521,20 @@ function reverseWords(str) {
  *   invertCase('JavaScript is Fun') => 'jAVAsCRIPT IS fUN'
  *   invertCase('12345') => '12345'
  */
-function invertCase(/* str */) {
-  throw new Error('Not implemented');
+// function invertCase(/* str */) {
+//   throw new Error('Not implemented');
+// }
+
+function invertCase(str) {
+  return str
+    .split('')
+    .map((char) => {
+      if (char === char.toUpperCase()) {
+        return char.toLowerCase();
+      }
+      return char.toUpperCase();
+    })
+    .join('');
 }
 
 // S23+++
